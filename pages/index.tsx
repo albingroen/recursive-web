@@ -6,7 +6,7 @@ export default function Home() {
     <>
       <Seo />
 
-      <div className="max-w-screen-lg h-screen mx-auto px-8 pt-24 flex flex-col md:justify-center gap-14 pb-56 md:pb-80">
+      <div className="max-w-screen-lg min-h-screen mx-auto px-8 pt-24 flex flex-col md:justify-center gap-14 pb-32 md:pb-80">
         <Image
           alt="Recursive logo"
           src="/icon.png"
