@@ -8,7 +8,7 @@ interface SeoProps {
   url?: string;
 }
 
-export const TITLE = "Recursive podcast";
+export const TITLE = "Recursive";
 
 export const DESCRIPTION =
   "A podcast about tech, design, side projects, and everything in between. From the latest trends in technology to the stories behind successful side-projects, this podcast covers it all. Tune in for interviews, reviews, and discussions about all things tech and design.";
