@@ -14,6 +14,11 @@ const LINKS = [
     label: "Listen on Spotify",
   },
   {
+    url: "https://overcast.fm/itunes1673088294/recursive",
+    image: "/overcast.png",
+    label: "Follow on Overcast",
+  },
+  {
     url: "https://github.com/albingroen/recursive-web/issues/new",
     image: "/github.png",
     label: "Submit a question",
