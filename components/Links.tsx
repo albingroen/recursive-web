@@ -14,6 +14,11 @@ const LINKS = [
     label: "Listen on Spotify",
   },
   {
+    url: "https://overcast.fm/itunes1673088294/recursive",
+    image: "/overcast.png",
+    label: "Follow on Overcast",
+  },
+  {
     url: "https://github.com/albingroen/recursive-web/issues/new",
     image: "/github.png",
     label: "Submit a question",
@@ -39,7 +44,7 @@ export default function Links() {
                     src={LINK.image}
                     width={50}
                     height={50}
-                    className="w-8 h-8"
+                    className="w-8 h-8 drop-shadow-md"
                   />
                   <span>{LINK.label}</span>
                 </Stack>
