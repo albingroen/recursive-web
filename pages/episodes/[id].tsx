@@ -2,6 +2,7 @@ import EpisodeComponent from "@/components/Episode";
 import Header from "@/components/Header";
 import Page from "@/components/Page";
 import Seo from "@/components/Seo";
+import { GetServerSidePropsContext } from "next";
 import { Item, Output } from "rss-parser";
 import { getEpisode } from "@/lib/rss";
 
@@ -13,7 +14,15 @@ interface EpisodeProps {
 export default function Episode({ podcast, episode }: EpisodeProps) {
   return (
     <>
-      <Seo description={episode.contentSnippet} title={episode.title} />
+      <Seo
+        image={
+          episode.title
+            ? `/api/episode-og?title=${encodeURIComponent(episode.title)}`
+            : "/api/episode-og"
+        }
+        description={episode.contentSnippet}
+        title={episode.title}
+      />
 
       <Page>
         <Header description={podcast.description} heading={podcast.title} />
@@ -26,7 +35,9 @@ export default function Episode({ podcast, episode }: EpisodeProps) {
   );
 }
 
-export async function getServerSideProps({ params }) {
+export async function getServerSideProps({
+  params,
+}: GetServerSidePropsContext) {
   const id = params?.id as string;
 
   if (!id) {
