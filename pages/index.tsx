@@ -43,7 +43,7 @@ export default function Home({
     <>
       <Seo description={podcast.description} title={podcast.title} />
 
-      <Stack className="md:min-h-screen flex-col md:flex-row" spacing="none">
+      <Stack className="md:h-screen flex-col md:flex-row" spacing="none">
         <Stack
           className="bg-gray-100 p-8 md:p-12 md:w-2/5 items-center md:items-end"
           direction="vertical"
@@ -142,7 +142,7 @@ export default function Home({
           </Stack>
         </Stack>
 
-        <div className="md:w-3/5 p-8 md:p-12 pt-10 md:pt-14">
+        <div className="md:w-3/5 p-8 md:p-12 pt-10 md:pt-14 overflow-y-auto">
           <Stack direction="vertical" className="max-w-xl !gap-10">
             <Stack direction="vertical" spacing="huge">
               <h1 className="text-3xl font-bold">{podcast.title}</h1>
