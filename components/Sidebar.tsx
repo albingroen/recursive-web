@@ -1,4 +1,5 @@
 import Hosts from "./Hosts";
+import Link from "next/link";
 import Links from "./Links";
 import Logo from "./Logo";
 import Stack from "./Stack";
@@ -10,11 +11,13 @@ export default function Sidebar() {
       direction="vertical"
     >
       <Stack direction="vertical" className="!gap-8" align="center">
-        <Logo />
+        <Link className="block" href="/">
+          <Logo />
+        </Link>
 
         <Links />
 
-        <hr className="w-full dark:border-gray-700" />
+        <hr className="w-full dark:border-gray-700/50" />
 
         <Hosts />
       </Stack>
