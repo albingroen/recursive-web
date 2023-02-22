@@ -20,7 +20,7 @@ export default function Home({
           <Stack direction="vertical" className="max-w-xl !gap-10">
             <Header description={podcast.description} heading={podcast.title} />
 
-            <hr />
+            <hr className="dark:border-gray-800" />
 
             <Episodes episodes={podcast.items} />
           </Stack>

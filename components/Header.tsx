@@ -11,9 +11,11 @@ export default function Header({
 }: HeaderProps) {
   return (
     <Stack direction="vertical" spacing="huge">
-      <h1 className="text-3xl font-bold">{heading}</h1>
+      <h1 className="text-4xl font-bold dark:font-semibold">{heading}</h1>
 
-      <p className="leading-relaxed text-xl text-gray-700">{description}</p>
+      <p className="leading-relaxed text-xl text-gray-700 dark:text-gray-300">
+        {description}
+      </p>
     </Stack>
   );
 }

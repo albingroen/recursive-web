@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Stack from "./Stack";
-
 const HOSTS = [
   {
     url: "https://twitter.com/albingroen",
@@ -26,7 +25,7 @@ export default function Hosts() {
               href={HOST.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="block rounded-xl hover:bg-gray-200 transition p-2 -mx-2 group"
+              className="block rounded-xl hover:bg-gray-200 dark:hover:bg-gray-700 transition p-2 -mx-2 group"
             >
               <Stack align="center" justify="between">
                 <Stack align="center">
