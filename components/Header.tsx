@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Stack from "./Stack";
 
 interface HeaderProps {
@@ -10,10 +11,14 @@ export default function Header({
   heading = "",
 }: HeaderProps) {
   return (
-    <Stack direction="vertical" spacing="huge">
-      <h1 className="text-3xl font-bold">{heading}</h1>
+    <Stack direction="vertical" className="!gap-6">
+      <Link href="/">
+        <h1 className="text-4xl font-bold dark:font-semibold">{heading}</h1>
+      </Link>
 
-      <p className="leading-relaxed text-xl text-gray-700">{description}</p>
+      <p className="leading-relaxed text-xl text-gray-700 dark:text-gray-300">
+        {description}
+      </p>
     </Stack>
   );
 }
