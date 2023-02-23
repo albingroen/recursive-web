@@ -2,12 +2,12 @@ import Episodes from "@/components/Episodes";
 import Header from "@/components/Header";
 import Page from "@/components/Page";
 import Seo from "@/components/Seo";
-import { InferGetServerSidePropsType } from "next";
+import { InferGetStaticPropsType } from "next";
 import { getPodcast } from "@/lib/rss";
 
 export default function Home({
   podcast,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) {
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
       <Seo description={podcast.description} title={podcast.title} />
@@ -23,7 +23,7 @@ export default function Home({
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const podcast = await getPodcast();
 
   return {
