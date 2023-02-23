@@ -10,11 +10,6 @@ const LINKS = [
     label: "Apple Podcasts",
   },
   {
-    url: "https://overcast.fm/itunes1673088294/recursive",
-    image: "/overcast.png",
-    label: "Follow on Overcast",
-  },
-  {
     url: "https://open.spotify.com/show/5DUToEJVyyxSLxUBTXqqB6",
     image: "/spotify.png",
     label: "Listen on Spotify",
@@ -42,7 +37,7 @@ export default function Links() {
           <li key={LINK.label}>
             <a
               href={LINK.url}
-              className="block rounded-xl hover:bg-gray-200 dark:hover:bg-gray-700 transition p-2 -mx-2 group"
+              className="block p-2 -mx-2 transition rounded-xl hover:bg-gray-200 dark:hover:bg-gray-700 group"
             >
               <Stack align="center" justify="between">
                 <Stack align="center">
@@ -60,7 +55,7 @@ export default function Links() {
                 </Stack>
 
                 <Stack
-                  className="h-6 w-6 rounded-full bg-gray-200 dark:bg-gray-700 group-hover:bg-gray-300 dark:group-hover:bg-gray-600 transition text-gray-500 dark:text-gray-300 group-hover:text-inherit"
+                  className="w-6 h-6 text-gray-500 transition bg-gray-200 rounded-full dark:bg-gray-700 group-hover:bg-gray-300 dark:group-hover:bg-gray-600 dark:text-gray-300 group-hover:text-inherit"
                   justify="center"
                   align="center"
                 >

@@ -2,7 +2,7 @@ import Content from "./Content";
 import ContentWrapper from "./ContentWrapper";
 import Sidebar from "./Sidebar";
 import Stack from "./Stack";
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 interface PageProps {
   children: ReactNode;
@@ -10,7 +10,7 @@ interface PageProps {
 
 export default function Page({ children }: PageProps) {
   return (
-    <Stack className="md:h-screen flex-col md:flex-row" spacing="none">
+    <Stack className="flex-col md:h-screen md:flex-row" spacing="none">
       <Sidebar />
 
       <ContentWrapper>
