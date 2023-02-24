@@ -1,4 +1,4 @@
-import Episodes from "@/components/Episodes";
+import FeedbackContent from "@/components/FeedbackContent";
 import Header from "@/components/Header";
 import Page from "@/components/Page";
 import Seo from "@/components/Seo";
@@ -6,7 +6,7 @@ import { getPodcast } from "@/lib/rss";
 
 import type { InferGetServerSidePropsType } from "next";
 
-export default function Home({
+export default function Feedback({
   podcast,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
@@ -18,7 +18,7 @@ export default function Home({
 
         <hr className="dark:border-gray-800" />
 
-        <Episodes episodes={podcast.items} />
+        <FeedbackContent email={podcast?.itunes?.owner?.email} />
       </Page>
     </>
   );

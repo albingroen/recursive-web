@@ -1,12 +1,12 @@
-import Episodes from "@/components/Episodes";
 import Header from "@/components/Header";
 import Page from "@/components/Page";
 import Seo from "@/components/Seo";
+import Sponsorship from "@/components/Sponsorship";
 import { getPodcast } from "@/lib/rss";
 
 import type { InferGetServerSidePropsType } from "next";
 
-export default function Home({
+export default function Sponsor({
   podcast,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
@@ -18,7 +18,7 @@ export default function Home({
 
         <hr className="dark:border-gray-800" />
 
-        <Episodes episodes={podcast.items} />
+        <Sponsorship email={podcast?.itunes?.owner?.email} />
       </Page>
     </>
   );
