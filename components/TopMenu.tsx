@@ -1,10 +1,10 @@
 import Stack from "./Stack";
 import TopMenuItem from "./TopMenuItem";
 
-export const MENU_ITEMS = [
-  { url: "/", name: "Episodes" },
-  { url: "/feedback", name: "Feedback" },
-  { url: "/sponsor", name: "Sponsor" },
+const MENU_ITEMS = [
+  { href: "/", title: "Episodes" },
+  { href: "/feedback", title: "Feedback" },
+  { href: "/sponsor", title: "Sponsor" },
 ];
 
 export default function TopMenu() {
@@ -14,7 +14,7 @@ export default function TopMenu() {
         {MENU_ITEMS.map((MENU_ITEM, index) => (
           <TopMenuItem
             menuItem={MENU_ITEM}
-            key={MENU_ITEM.name}
+            key={MENU_ITEM.title}
             index={index}
           />
         ))}
