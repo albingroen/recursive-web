@@ -8,7 +8,7 @@ import type { InferGetServerSidePropsType } from "next";
 
 export default function Home({
   podcast,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) {
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
       <Seo description={podcast.description} title={podcast.title} />
@@ -24,7 +24,7 @@ export default function Home({
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const podcast = await getPodcast();
 
   return {

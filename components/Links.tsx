@@ -2,6 +2,7 @@ import ArrowRight from "./ArrowRight";
 import Image from "next/image";
 import Stack from "./Stack";
 import classNames from "@/lib/classNames";
+import { RSS_FEED } from "@/lib/constants";
 
 const LINKS = [
   {
@@ -18,6 +19,11 @@ const LINKS = [
     url: "https://overcast.fm/itunes1673088294/recursive",
     image: "/overcast.png",
     label: "Follow on Overcast",
+  },
+  {
+    url: RSS_FEED,
+    image: "/rss.png",
+    label: "RSS Feed",
   },
   {
     url: "https://github.com/albingroen/recursive-web/issues/new",

@@ -1,9 +1,10 @@
 import Parser from "rss-parser";
+import { RSS_FEED } from "./constants";
 
 const RSSParser = new Parser();
 
 export async function getPodcast() {
-  return RSSParser.parseURL("https://anchor.fm/s/d8eb16fc/podcast/rss");
+  return RSSParser.parseURL(RSS_FEED);
 }
 
 export async function getEpisode(id: string) {

@@ -2,9 +2,9 @@ import EpisodeComponent from "@/components/Episode";
 import Header from "@/components/Header";
 import Page from "@/components/Page";
 import Seo from "@/components/Seo";
-import { GetServerSidePropsContext } from "next";
+import { GetStaticPropsContext } from "next";
 import { Item, Output } from "rss-parser";
-import { getEpisode } from "@/lib/rss";
+import { getEpisode, getPodcast } from "@/lib/rss";
 
 interface EpisodeProps {
   podcast: Output<Item>;
@@ -35,9 +35,7 @@ export default function Episode({ podcast, episode }: EpisodeProps) {
   );
 }
 
-export async function getServerSideProps({
-  params,
-}: GetServerSidePropsContext) {
+export async function getStaticProps({ params }: GetStaticPropsContext) {
   const id = params?.id as string;
 
   if (!id) {
@@ -56,5 +54,18 @@ export async function getServerSideProps({
 
   return {
     props: result,
+  };
+}
+
+export async function getStaticPaths() {
+  const podcast = await getPodcast();
+
+  return {
+    paths: podcast.items.map((episode) => {
+      return {
+        params: { id: episode.guid },
+      };
+    }),
+    fallback: false,
   };
 }
