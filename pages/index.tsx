@@ -4,7 +4,7 @@ import Page from "@/components/Page";
 import Seo from "@/components/Seo";
 import { getPodcast } from "@/lib/rss";
 
-import type { InferGetServerSidePropsType } from "next";
+import type { InferGetStaticPropsType } from "next";
 
 export default function Home({
   podcast,
