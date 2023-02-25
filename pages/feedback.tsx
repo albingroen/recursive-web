@@ -1,4 +1,4 @@
-import Episodes from "@/components/Episodes";
+import FeedbackContent from "@/components/FeedbackContent";
 import Header from "@/components/Header";
 import Page from "@/components/Page";
 import Seo from "@/components/Seo";
@@ -6,9 +6,9 @@ import { getPodcast } from "@/lib/rss";
 
 import type { InferGetServerSidePropsType } from "next";
 
-export default function Home({
+export default function Feedback({
   podcast,
-}: InferGetStaticPropsType<typeof getStaticProps>) {
+}: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
     <>
       <Seo description={podcast.description} title={podcast.title} />
@@ -18,13 +18,13 @@ export default function Home({
 
         <hr className="dark:border-gray-800" />
 
-        <Episodes episodes={podcast.items} />
+        <FeedbackContent email={podcast?.itunes?.owner?.email} />
       </Page>
     </>
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const podcast = await getPodcast();
 
   return {

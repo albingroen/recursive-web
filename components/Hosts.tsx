@@ -13,10 +13,12 @@ const HOSTS = [
   },
 ];
 
+const HEADER = "Hosts";
+
 export default function Hosts() {
   return (
     <Stack direction="vertical" className="w-full">
-      <p className="text-lg font-semibold">Hosts</p>
+      <p className="text-lg font-semibold">{HEADER}</p>
 
       <ul>
         {HOSTS.map((HOST) => (
@@ -25,7 +27,7 @@ export default function Hosts() {
               href={HOST.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="block rounded-xl hover:bg-gray-200 dark:hover:bg-gray-700 transition p-2 -mx-2 group"
+              className="block p-2 -mx-2 transition rounded-xl hover:bg-gray-200 dark:hover:bg-gray-700 group"
             >
               <Stack align="center" justify="between">
                 <Stack align="center">
@@ -34,7 +36,7 @@ export default function Hosts() {
                     src={HOST.photo}
                     width={50}
                     height={50}
-                    className="w-8 h-8 grayscale rounded-full"
+                    className="w-8 h-8 rounded-full grayscale"
                   />
                   <span>{HOST.name}</span>
                 </Stack>
