@@ -10,9 +10,7 @@ export default function TopMenu() {
   return (
     <ul className="flex flex-row flex-wrap gap-3">
       {MENU_ITEMS.map((MENU_ITEM) => (
-        <li key={MENU_ITEM.title}>
-          <TopMenuItem menuItem={MENU_ITEM} />
-        </li>
+        <TopMenuItem key={MENU_ITEM.title} menuItem={MENU_ITEM} />
       ))}
     </ul>
   );

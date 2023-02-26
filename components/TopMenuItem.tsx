@@ -18,16 +18,18 @@ export default function TopMenuItem({ menuItem }: TopMenuItemProps) {
   const isActive = asPath === menuItem.href;
 
   return (
-    <Link
-      href={menuItem.href}
-      className={classNames(
-        "px-4 py-2 border dark:border-gray-700 transition rounded-full select-none",
-        isActive
-          ? "bg-gray-200 dark:bg-gray-700"
-          : "bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800"
-      )}
-    >
-      {menuItem.title}
-    </Link>
+    <li>
+      <Link
+        href={menuItem.href}
+        className={classNames(
+          "block px-4 py-2 border dark:border-gray-700 transition rounded-full select-none",
+          isActive
+            ? "bg-gray-200 dark:bg-gray-700"
+            : "bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800"
+        )}
+      >
+        {menuItem.title}
+      </Link>
+    </li>
   );
 }
