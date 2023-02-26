@@ -25,20 +25,31 @@ export default function Sponsorship({ email = "" }: SponsorshipProps) {
   const emailWithSponsorSubject = `${email}?subject=Sponsorship`;
 
   return (
-    <Stack direction="vertical" className="!gap-6">
-      <h2 className="text-2xl font-semibold">{HEADER}</h2>
-      <p>{DESCRIPTION}</p>
-      <Stack>
+    <Stack direction="vertical" className="!gap-10">
+      <Stack direction="vertical" className="!gap-7" align="start">
+        <Stack direction="vertical" spacing="large">
+          <h2 className="text-2xl font-semibold">{HEADER}</h2>
+
+          <p className="leading-relaxed text-gray-700 dark:text-gray-400">
+            {DESCRIPTION}
+          </p>
+        </Stack>
+
         <MailButton
           buttonLabel={BUTTON_LABEL}
           email={emailWithSponsorSubject}
         />
       </Stack>
-      <Stack direction="vertical">
+
+      <Stack direction="vertical" spacing="large">
         <h3 className="text-xl font-semibold">{INFO_HEADER}</h3>
-        <ul className="ml-4 list-disc">
+
+        <ul className="ml-4 list-disc flex flex-col gap-3">
           {INFO_DESCRIPTION.map((DESCRIPTION, index) => (
-            <li key={index} className="my-2">
+            <li
+              key={index}
+              className="leading-relaxed text-gray-700 dark:text-gray-400"
+            >
               {DESCRIPTION.text}
             </li>
           ))}

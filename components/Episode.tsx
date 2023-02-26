@@ -13,7 +13,7 @@ export default function Episode({ episode }: EpisodeProps) {
         {episode.title}
       </h4>
 
-      <Stack direction="vertical" className="!gap-6">
+      <Stack direction="vertical" className="!gap-7">
         <Stack direction="vertical">
           {episode.isoDate && (
             <p className="text-sm text-orange-800 dark:text-orange-500/90 leading-relaxed">

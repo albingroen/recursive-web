@@ -12,14 +12,17 @@ export default function Header({
   heading = "",
 }: HeaderProps) {
   return (
-    <Stack direction="vertical" className="!gap-6">
-      <Link href="/">
-        <h1 className="text-4xl font-bold dark:font-semibold">{heading}</h1>
-      </Link>
+    <Stack direction="vertical" className="!gap-10">
+      <Stack direction="vertical" className="!gap-6">
+        <Link href="/">
+          <h1 className="text-4xl font-bold dark:font-semibold">{heading}</h1>
+        </Link>
 
-      <p className="text-xl leading-relaxed text-gray-700 dark:text-gray-300">
-        {description}
-      </p>
+        <p className="text-xl leading-relaxed text-gray-700 dark:text-gray-300">
+          {description}
+        </p>
+      </Stack>
+
       <TopMenu />
     </Stack>
   );

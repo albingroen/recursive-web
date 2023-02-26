@@ -1,4 +1,6 @@
+import classNames from "@/lib/classNames";
 import React from "react";
+import ArrowRight from "./ArrowRight";
 
 const BUTTON_LABEL = "Email us";
 
@@ -14,9 +16,14 @@ export default function MailButton({
   return (
     <a
       href={`mailto:${email}`}
-      className="block p-2 -mx-2 transition bg-gray-100 rounded-xl dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 group"
+      className={classNames(
+        "flex items-center gap-3 text-white px-4 py-2 font-medium transition rounded-full",
+        "bg-orange-500 hover:bg-orange-600",
+        "dark:bg-orange-800 dark:hover:bg-orange-700"
+      )}
     >
-      {buttonLabel}
+      <span>{buttonLabel}</span>
+      <ArrowRight />
     </a>
   );
 }
