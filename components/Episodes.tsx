@@ -9,9 +9,9 @@ interface EpisodesProps {
 
 export default function Episodes({ episodes }: EpisodesProps) {
   return (
-    <ul>
+    <ul className="divide-y dark:divide-gray-800">
       {episodes.map((episode, i) => (
-        <li key={episode.guid}>
+        <li key={episode.guid} className={i ? "py-8" : "pb-8"}>
           <Link
             href={`/episodes/${episode.guid}`}
             className={classNames(
