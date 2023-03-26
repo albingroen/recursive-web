@@ -13,7 +13,6 @@ module.exports = {
       sans: ["var(--font-inter)"],
     },
   },
-  plugins: [],
   safelist: [
     {
       pattern: /gap-/,
@@ -25,4 +24,5 @@ module.exports = {
       pattern: /justify-/,
     },
   ],
+  plugins: [require("@tailwindcss/typography")],
 };

@@ -19,7 +19,7 @@ export default function Episodes({ episodes }: EpisodesProps) {
               i ? "-mx-5" : "-mx-5 -mt-5"
             )}
           >
-            <Episode episode={episode} />
+            <Episode inList episode={episode} />
           </Link>
         </li>
       ))}
