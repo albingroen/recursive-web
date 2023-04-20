@@ -18,7 +18,7 @@ export default function Header({
           <h1 className="text-4xl font-bold dark:font-semibold">{heading}</h1>
         </Link>
 
-        <p className="text-xl leading-relaxed text-gray-700 dark:text-gray-300">
+        <p className="text-xl leading-relaxed text-neutral-700 dark:text-neutral-300">
           {description}
         </p>
       </Stack>

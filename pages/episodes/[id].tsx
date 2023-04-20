@@ -27,7 +27,7 @@ export default function Episode({ podcast, episode }: EpisodeProps) {
       <Page>
         <Header description={podcast.description} heading={podcast.title} />
 
-        <hr className="dark:border-gray-800" />
+        <hr className="dark:border-neutral-800" />
 
         <EpisodeComponent episode={episode} />
       </Page>

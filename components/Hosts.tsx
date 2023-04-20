@@ -27,7 +27,7 @@ export default function Hosts() {
               href={HOST.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-2 -mx-2 transition rounded-xl hover:bg-gray-200 dark:hover:bg-gray-700 group"
+              className="block p-2 -mx-2 transition rounded-xl hover:bg-neutral-200 dark:hover:bg-neutral-700 group"
             >
               <Stack align="center" justify="between">
                 <Stack align="center">

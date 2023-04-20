@@ -16,7 +16,7 @@ export default function Sponsor({
       <Page>
         <Header description={podcast.description} heading={podcast.title} />
 
-        <hr className="dark:border-gray-800" />
+        <hr className="dark:border-neutral-800" />
 
         <Sponsorship email={podcast?.itunes?.owner?.email} />
       </Page>

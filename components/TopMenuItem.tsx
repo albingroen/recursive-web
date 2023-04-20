@@ -22,10 +22,10 @@ export default function TopMenuItem({ menuItem }: TopMenuItemProps) {
       <Link
         href={menuItem.href}
         className={classNames(
-          "block px-4 py-2 border dark:border-gray-700 transition rounded-full select-none",
+          "block px-4 py-2 border dark:border-neutral-700 transition rounded-full select-none",
           isActive
-            ? "bg-gray-200 dark:bg-gray-700"
-            : "bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800"
+            ? "bg-neutral-200 dark:bg-neutral-700"
+            : "bg-transparent hover:bg-neutral-100 dark:hover:bg-neutral-800"
         )}
       >
         {menuItem.title}

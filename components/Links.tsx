@@ -43,7 +43,7 @@ export default function Links() {
           <li key={LINK.label}>
             <a
               href={LINK.url}
-              className="block p-2 -mx-2 transition rounded-xl hover:bg-gray-200 dark:hover:bg-gray-700 group"
+              className="block p-2 -mx-2 transition rounded-xl hover:bg-neutral-200 dark:hover:bg-neutral-700 group"
             >
               <Stack align="center" justify="between">
                 <Stack align="center">
@@ -61,7 +61,7 @@ export default function Links() {
                 </Stack>
 
                 <Stack
-                  className="w-6 h-6 text-gray-500 transition bg-gray-200 rounded-full dark:bg-gray-700 group-hover:bg-gray-300 dark:group-hover:bg-gray-600 dark:text-gray-300 group-hover:text-inherit"
+                  className="w-6 h-6 text-neutral-500 transition bg-neutral-200 rounded-full dark:bg-neutral-700 group-hover:bg-neutral-300 dark:group-hover:bg-neutral-600 dark:text-neutral-300 group-hover:text-inherit"
                   justify="center"
                   align="center"
                 >

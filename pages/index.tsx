@@ -16,7 +16,7 @@ export default function Home({
       <Page>
         <Header description={podcast.description} heading={podcast.title} />
 
-        <hr className="dark:border-gray-800" />
+        <hr className="dark:border-neutral-800" />
 
         <Episodes episodes={podcast.items} />
       </Page>

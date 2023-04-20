@@ -30,7 +30,7 @@ export default function Sponsorship({ email = "" }: SponsorshipProps) {
         <Stack direction="vertical" spacing="large">
           <h2 className="text-2xl font-semibold">{HEADER}</h2>
 
-          <p className="leading-relaxed text-gray-700 dark:text-gray-400">
+          <p className="leading-relaxed text-neutral-700 dark:text-neutral-400">
             {DESCRIPTION}
           </p>
         </Stack>
@@ -48,7 +48,7 @@ export default function Sponsorship({ email = "" }: SponsorshipProps) {
           {INFO_DESCRIPTION.map((DESCRIPTION, index) => (
             <li
               key={index}
-              className="leading-relaxed text-gray-700 dark:text-gray-400"
+              className="leading-relaxed text-neutral-700 dark:text-neutral-400"
             >
               {DESCRIPTION.text}
             </li>
