@@ -10,7 +10,21 @@ module.exports = {
     extend: {},
     fontFamily: {
       ...fontFamily,
-      sans: ["var(--font-inter)"],
+      sans: [
+        "Inter var",
+        "Inter",
+        "system-ui",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "Roboto",
+        "Helvetica",
+        "Arial",
+        "sans-serif",
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+      ],
     },
   },
   safelist: [
