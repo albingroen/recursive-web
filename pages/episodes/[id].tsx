@@ -14,15 +14,7 @@ interface EpisodeProps {
 export default function Episode({ podcast, episode }: EpisodeProps) {
   return (
     <>
-      <Seo
-        image={
-          episode.title
-            ? `/api/episode-og?title=${encodeURIComponent(episode.title)}`
-            : "/api/episode-og"
-        }
-        description={episode.contentSnippet}
-        title={episode.title}
-      />
+      <Seo description={episode.contentSnippet} title={episode.title} />
 
       <Page>
         <Header description={podcast.description} heading={podcast.title} />

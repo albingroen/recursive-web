@@ -14,10 +14,10 @@ export const DESCRIPTION =
   "A podcast about tech, design, side projects, and everything in between. From the latest trends in technology to the stories behind successful side-projects, this podcast covers it all. Tune in for interviews, reviews, and discussions about all things tech and design.";
 
 const Seo = ({
+  image = "https://res.cloudinary.com/albin-groen/image/upload/v1685314875/Recursive/seo.png",
   url = "https://recursivepod.com",
   description = DESCRIPTION,
   title = TITLE,
-  image = "",
   canonicalUrl,
 }: SeoProps) => {
   return (
