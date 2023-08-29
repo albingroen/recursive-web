@@ -2,7 +2,7 @@ import Image from "next/image";
 import Stack from "./Stack";
 const HOSTS = [
   {
-    url: "https://twitter.com/albingroen",
+    url: "https://posts.cv/albingroen",
     photo: "/albin.jpeg",
     name: "Albin Groen",
   },
