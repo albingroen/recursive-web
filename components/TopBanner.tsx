@@ -1,7 +1,7 @@
 import Stack from "./Stack";
 
-const HEADER = "Swedish Midsummer Break";
-const SUBTITLE = "We are enjoying a little summer break and will be back soon!";
+const HEADER = "Taking a break";
+const SUBTITLE = "We are enjoying a little break and will be back soon!";
 
 export default function TopBanner() {
   return (
