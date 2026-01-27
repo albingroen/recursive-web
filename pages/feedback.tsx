@@ -31,5 +31,6 @@ export async function getStaticProps() {
     props: {
       podcast,
     },
+    revalidate: 86400
   };
 }
