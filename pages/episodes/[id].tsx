@@ -32,20 +32,21 @@ export async function getStaticProps({ params }: GetStaticPropsContext) {
 
   if (!id) {
     return {
-      props: {},
-    };
+      notFound: true
+  };
   }
 
   const result = await getEpisode(id);
 
   if (!result) {
     return {
-      props: {},
+      notFound: true
     };
   }
 
   return {
     props: result,
+    revalidate: 86400
   };
 }
 
@@ -58,6 +59,6 @@ export async function getStaticPaths() {
         params: { id: episode.guid },
       };
     }),
-    fallback: false,
+    fallback: 'blocking',
   };
 }
