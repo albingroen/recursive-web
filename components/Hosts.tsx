@@ -9,7 +9,7 @@ const HOSTS = [
   {
     url: "https://rtgs.me",
     name: "Robbert Tuerlings",
-    photo: "/robbert.jpeg",
+    photo: "/robbert.png",
   },
 ];
 
